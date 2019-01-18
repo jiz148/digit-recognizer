@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fa4fbe74-7d4b-4783-b40d-cc2714ece082" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dr/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/dr/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dr/datasets/saved_parameters.npy" beforeDir="false" afterPath="$PROJECT_DIR$/dr/datasets/saved_parameters.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dr/mathEx.py" beforeDir="false" afterPath="$PROJECT_DIR$/dr/mathEx.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dr/training.py" beforeDir="false" afterPath="$PROJECT_DIR$/dr/training.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dr/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/dr/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mathEx.py" beforeDir="false" afterPath="$PROJECT_DIR$/dr/mathEx.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dr/mathEx.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="86" column="97" selection-start-line="86" selection-start-column="97" selection-end-line="86" selection-end-column="97" />
+            <state relative-caret-position="142">
+              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -28,7 +27,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dr/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
+            <state relative-caret-position="284">
               <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
               <folding>
                 <element signature="e#18#27#0" expanded="true" />
@@ -40,8 +39,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dr/training.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+            <state relative-caret-position="903">
+              <caret line="85" column="58" selection-start-line="85" selection-start-column="58" selection-end-line="85" selection-end-column="58" />
               <folding>
                 <element signature="e#9#40#0" expanded="true" />
               </folding>
@@ -73,8 +72,8 @@
         <option value="$PROJECT_DIR$/dr/datasets/mian.py" />
         <option value="$PROJECT_DIR$/dr/datasets/main.py" />
         <option value="$PROJECT_DIR$/dr/ultils.py" />
-        <option value="$PROJECT_DIR$/dr/main.py" />
         <option value="$PROJECT_DIR$/dr/utils.py" />
+        <option value="$PROJECT_DIR$/dr/main.py" />
         <option value="$PROJECT_DIR$/dr/mathEx.py" />
         <option value="$PROJECT_DIR$/dr/training.py" />
       </list>
@@ -197,6 +196,15 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
@@ -206,16 +214,16 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32771084" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32771084" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32891566" />
       <window_info anchor="bottom" id="Inspection Results" order="8" visible="true" weight="0.32863188" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="11" weight="0.32863188" />
+      <window_info anchor="bottom" id="Python Console" order="11" weight="0.32771084" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -251,7 +259,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dr/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
+        <state relative-caret-position="284">
           <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding>
             <element signature="e#18#27#0" expanded="true" />
@@ -261,15 +269,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dr/mathEx.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="86" column="97" selection-start-line="86" selection-start-column="97" selection-end-line="86" selection-end-column="97" />
+        <state relative-caret-position="142">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dr/training.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
+        <state relative-caret-position="903">
+          <caret line="85" column="58" selection-start-line="85" selection-start-column="58" selection-end-line="85" selection-end-column="58" />
           <folding>
             <element signature="e#9#40#0" expanded="true" />
           </folding>

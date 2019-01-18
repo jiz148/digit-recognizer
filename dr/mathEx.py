@@ -9,7 +9,7 @@ def compute_cost(AL, Y):
     m = Y.shape[1]
 
     # Compute loss from aL and y.
-    cost = (1. / m) * (-np.dot(Y, np.log(AL).T) - np.dot(1 - Y, np.log(1 - AL ).T))
+    cost = sum(sum((1. / m) * (-np.dot(Y, np.log(AL).T) - np.dot(1 - Y, np.log(1 - AL ).T))))
 
     cost = np.squeeze(cost)
 
@@ -101,13 +101,13 @@ def L_model_backward_with_l2(AL, Y, caches, lambd):
     # Lth layer (SIGMOID -> LINEAR) gradients. Inputs: "AL, Y, caches". Outputs: "grads["dAL"], grads["dWL"], grads["dbL"]
     current_cache = caches[L - 1]
     grads["dA" + str(L - 1)], grads["dW" + str(L)], grads["db" + str(L)] = linear_activation_backward_with_l2(dAL, current_cache,
-                                                                                                              lambd, activation="relu") # changed
+                                                                                                              lambd, activation="sigmoid") # changed
 
     for l in reversed(range(L - 1)):
         # lth layer: (RELU -> LINEAR) gradients.
         current_cache = caches[l]
         dA_prev_temp, dW_temp, db_temp = linear_activation_backward_with_l2(grads["dA" + str(l + 1)], current_cache,
-                                                                                     lambd, activation="sigmoid") # was relu
+                                                                                     lambd, activation="relu") # was relu
         grads["dA" + str(l)] = dA_prev_temp
         grads["dW" + str(l + 1)] = dW_temp
         grads["db" + str(l + 1)] = db_temp
@@ -283,3 +283,22 @@ def update_parameters(parameters, grads, learning_rate):
         parameters["b" + str(l + 1)] = parameters["b" + str(l + 1)] - learning_rate * grads["db" + str(l + 1)]
 
     return parameters
+
+
+def change_to_multi_class(y, num_of_labels):
+    """
+
+    :param y:
+    :param num_of_labels:
+    :return:
+    """
+
+    m = y.shape[1]
+    multi_class_y = np.zeros([num_of_labels, m])
+
+    for i in range(m):
+        label = y[0, i]
+        multi_class_y[int(label), i] = 1
+
+    return multi_class_y
+

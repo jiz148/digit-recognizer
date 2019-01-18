@@ -10,8 +10,7 @@ from dr.utils import \
 from dr.mathEx import *
 
 LAYERS_DIMENSIONS = [784, 20, 7, 5, 3, 10]  # 5-layer model
-NUMBER_OF_LAYERS = 10
-
+NUMBER_OF_LABELS = 10
 
 def L_layer_model(
     x, y, layers_dims,
@@ -37,8 +36,8 @@ def L_layer_model(
 
         # Forward propagation: [LINEAR -> RELU]*(L-1) -> LINEAR -> SIGMOID.
         AL, caches = L_model_forward(x, parameters)
-        print(AL)
-        print(y)
+        # print(AL)
+        # print(y)
         # Compute costs
         cost = compute_cost_with_l2_regularization(AL, y, parameters, lambd)
 
@@ -74,7 +73,7 @@ def run():
     train_x_orig, train_y_orig, test_x_orig, test_y = load_datas()
 
     # make multi-class ys
-    # last time here
+    train_y = change_to_multi_class(train_y_orig, NUMBER_OF_LABELS)
 
     # standardization
     train_x = train_x_orig/255.
@@ -84,7 +83,7 @@ def run():
 
     # train parameters
     parameters = L_layer_model(
-        train_x, train_y, layers_dims, learning_rate=0.0075, num_iterations=2000, print_cost=True, lambd=0.7)
+        train_x, train_y, layers_dims, learning_rate=0.005, num_iterations=2000, print_cost=True, lambd=0.7)
 
     # save parameters
     save_parameters(parameters)
