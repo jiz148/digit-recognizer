@@ -29,9 +29,7 @@ def predict(x, y, parameters):
 
     # print results
     print("predictions: " + str(prediction))
-    print(prediction.shape)
     print("true labels: " + str(y))
-    print(y.shape)
     print("Accuracy: " + str(np.sum((prediction == y) / m)))
 
     return prediction
