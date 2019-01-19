@@ -28,8 +28,10 @@ def predict(x, y, parameters):
     prediction = one_vs_all_prediction(probas)
 
     # print results
-    print ("predictions: " + str(p))
-    print ("true labels: " + str(y))
+    print("predictions: " + str(prediction))
+    print(prediction.shape)
+    print("true labels: " + str(y))
+    print(y.shape)
     print("Accuracy: " + str(np.sum((prediction == y) / m)))
 
     return prediction
@@ -42,7 +44,7 @@ def run():
     train_x_orig, train_y_orig, test_x_orig, test_y_orig = load_datas()
 
     # standardization
-    train_x = test_x_orig / 255.
+    train_x = train_x_orig / 255.
     test_x = test_x_orig / 255.
 
     # load parameters
