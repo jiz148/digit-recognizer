@@ -309,6 +309,7 @@ def dropouts_backward(dA, D, keep_prob):
     return dA
 """
 
+
 def update_parameters(parameters, grads, learning_rate):
 
     L = len(parameters) // 2  # number of layers in the neural network
