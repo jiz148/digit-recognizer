@@ -15,8 +15,8 @@ from dr.utils import \
     print_pypath
 
 IMAGE_SIZE = 28
-IMAGE_NAME = '8.jpg'
-TRUE_ANSWER = 8
+IMAGE_NAME = '0.jpg'
+TRUE_ANSWER = 0
 IMAGE_TYPE = 1
 PWD = os.path.dirname(os.path.realpath(__file__))
 
@@ -27,7 +27,7 @@ def predict_image(image_name, my_label_y, image_type):
     parameters = load_parameters()
 
     fname = os.path.join(PWD, 'images', image_name)
-    
+
     my_image = Image.open(fname).convert('L').resize((IMAGE_SIZE, IMAGE_SIZE))
     my_image_x = np.array(my_image).reshape([IMAGE_SIZE*IMAGE_SIZE, 1])
 
