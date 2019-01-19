@@ -28,10 +28,15 @@ def predict(x, y, parameters):
     prediction = one_vs_all_prediction(probas)
 
     # print results
+<<<<<<< HEAD
     print("predictions: " + str(prediction))
     print(prediction.shape)
     print("true labels: " + str(y))
     print(y.shape)
+=======
+    print ("predictions: " + str(prediction))
+    print ("true labels: " + str(y))
+>>>>>>> 6e5b1a2c6dd8838b014f828451c32e71dfdfce37
     print("Accuracy: " + str(np.sum((prediction == y) / m)))
 
     return prediction
