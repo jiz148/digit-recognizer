@@ -1,4 +1,6 @@
 """
+training.py
+Training using gradient decent
 
 """
 import matplotlib.pyplot as plt
@@ -11,6 +13,9 @@ from dr.mathEx import *
 
 LAYERS_DIMENSIONS = [784, 20, 7, 5, 3, 10]  # 5-layer model
 NUMBER_OF_LABELS = 10
+LEARNING_RATE = 0.003
+NUMBER_OF_ITERATIONS = 2000
+LAMBDA = 0.7
 
 def L_layer_model(
     x, y, layers_dims,
@@ -70,7 +75,7 @@ def run():
     """
     np.random.seed(1)
     print('Start training ...')
-    train_x_orig, train_y_orig, test_x_orig, test_y = load_datas()
+    train_x_orig, train_y_orig, test_x_orig, test_y_orig = load_datas()
 
     # make multi-class ys
     train_y = change_to_multi_class(train_y_orig, NUMBER_OF_LABELS)
@@ -83,7 +88,7 @@ def run():
 
     # train parameters
     parameters = L_layer_model(
-        train_x, train_y, layers_dims, learning_rate=0.005, num_iterations=2000, print_cost=True, lambd=0.7)
+        train_x, train_y, layers_dims, learning_rate=LEARNING_RATE, num_iterations=NUMBER_OF_ITERATIONS, print_cost=True, lambd=LAMBDA)
 
     # save parameters
     save_parameters(parameters)

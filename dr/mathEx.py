@@ -4,6 +4,24 @@
 import numpy as np
 
 
+def change_to_multi_class(y, num_of_labels):
+    """
+
+    :param y:
+    :param num_of_labels:
+    :return:
+    """
+
+    m = y.shape[1]
+    multi_class_y = np.zeros([num_of_labels, m])
+
+    for i in range(m):
+        label = y[0, i]
+        multi_class_y[int(label), i] = 1
+
+    return multi_class_y
+
+
 def compute_cost(AL, Y):
 
     m = Y.shape[1]
@@ -182,6 +200,23 @@ def linear_forward(A, W, b):
     return Z, cache
 
 
+def one_vs_all_prediction(prob_matrix):
+    """
+    Compare every probability, get the maximum and output the index.
+
+    :param prob_matrix: probability matrix
+    :return: prediction generated from probability matrix
+    """
+    m = prob_matrix.shape[1]
+
+    prediction = np.argmax(prob_matrix, axis=0)
+    prediction = np.array([prediction])  # keep dimensions
+
+    assert (prediction.shape == (1, m))
+
+    return prediction
+
+
 def relu(Z):
 
     A = np.maximum(0, Z)
@@ -258,6 +293,7 @@ def sigmoid_backward(dA, cache):
     return dZ
 
 
+"""
 def dropouts_forward(A,  activation_cache, keep_prob):
     D = np.random.rand(A.shape[0], A.shape[1])
     D = D < keep_prob
@@ -271,7 +307,7 @@ def dropouts_backward(dA, D, keep_prob):
     dA = dA*D
     dA = dA/keep_prob
     return dA
-
+"""
 
 def update_parameters(parameters, grads, learning_rate):
 
@@ -285,20 +321,5 @@ def update_parameters(parameters, grads, learning_rate):
     return parameters
 
 
-def change_to_multi_class(y, num_of_labels):
-    """
 
-    :param y:
-    :param num_of_labels:
-    :return:
-    """
-
-    m = y.shape[1]
-    multi_class_y = np.zeros([num_of_labels, m])
-
-    for i in range(m):
-        label = y[0, i]
-        multi_class_y[int(label), i] = 1
-
-    return multi_class_y
 

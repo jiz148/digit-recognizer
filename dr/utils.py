@@ -43,6 +43,17 @@ def load_dataset():
     return train_data
 
 
+def load_parameters():
+    """
+    """
+    data_dir = os.path.dirname(os.path.realpath(__file__))
+    saved_parameters = os.path.join(data_dir, 'datasets', 'saved_parameters.npy')
+    print('\nloading saved parameters: {}'.format(saved_parameters))
+    parameters = np.load(saved_parameters).item()
+
+    return parameters
+
+
 def print_pypath():
     """
     Print out Python path.
