@@ -28,8 +28,8 @@ def predict(x, y, parameters):
     prediction = one_vs_all_prediction(probas)
 
     # print results
-    print("predictions: " + str(prediction))
-    print("true labels: " + str(y))
+    print ("predictions: " + str(prediction))
+    print ("true labels: " + str(y))
     print("Accuracy: " + str(np.sum((prediction == y) / m)))
 
     return prediction
