@@ -11,11 +11,13 @@ from dr.utils import \
     print_pypath
 from dr.mathEx import *
 
-LAYERS_DIMENSIONS = [784, 20, 7, 5, 3, 10]  # 5-layer model
+# hyper-parameters
+LAYERS_DIMENSIONS = [784, 50, 35, 20, 15, 10]  # 5-layer model
 NUMBER_OF_LABELS = 10
-LEARNING_RATE = 0.003
-NUMBER_OF_ITERATIONS = 2000
+LEARNING_RATE = 0.01
+NUMBER_OF_ITERATIONS = 6000
 LAMBDA = 0.7
+
 
 def L_layer_model(
     x, y, layers_dims,

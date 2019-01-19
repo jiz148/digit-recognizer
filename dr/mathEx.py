@@ -95,7 +95,7 @@ def L_model_forward(X, parameters):
     for l in range(1, L):
         A_prev = A
         A, cache = linear_activation_forward(A_prev, parameters['W' + str(l)], parameters['b' + str(l)],
-                                                           activation="relu") #was relu
+                                                           activation="leaky_relu") #was relu
         caches.append(cache)
 
     # Implement LINEAR -> SIGMOID. Add "cache" to the "caches" list.
@@ -125,7 +125,7 @@ def L_model_backward_with_l2(AL, Y, caches, lambd):
         # lth layer: (RELU -> LINEAR) gradients.
         current_cache = caches[l]
         dA_prev_temp, dW_temp, db_temp = linear_activation_backward_with_l2(grads["dA" + str(l + 1)], current_cache,
-                                                                                     lambd, activation="relu") # was relu
+                                                                                     lambd, activation="leaky_relu") # was relu
         grads["dA" + str(l)] = dA_prev_temp
         grads["dW" + str(l + 1)] = dW_temp
         grads["db" + str(l + 1)] = db_temp
