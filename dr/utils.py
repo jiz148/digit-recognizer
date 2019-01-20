@@ -1,5 +1,8 @@
 """
-utilities
+@author: Jinchi Zhang, Jason Zhu
+@email: jizjiz148148@gmail.com, jzhu@infoblox.com
+
+Utilities functions.
 """
 import os
 import numpy as np
@@ -10,12 +13,12 @@ PWD = os.path.dirname(os.path.realpath(__file__))
 def load_datas():
     """
     load datas from os
-    39,998 pictures as train data, 2000 as test data
+    for training, 39,998 pictures as train data, 2000 as test data
 
-    :return:
+    :return: train and tests sets for training and analyzing, numpy arrays
     """
     print('\nLoading data sets')
-    data = load_dataset()
+    data = load_dataset('train.csv')
     data_modified = data[1:, :]
     train_set_x_orig = data_modified[1:39999, 1:]
     train_set_y_orig = data_modified[1:39999, 0]
@@ -32,19 +35,23 @@ def load_datas():
     return train_set_x_orig, train_set_y_orig, test_set_x_orig, test_set_y_orig
 
 
-def load_dataset():
+def load_dataset(data_name):
     """
-    load data from os
+    load data from os, datasets folder
 
-    :return: train data
+    :param data_name: data name, string
+    :return: data, numpy array
     """
-    train_data_csv = os.path.join(PWD, 'datasets', 'train.csv')
-    train_data = np.genfromtxt(train_data_csv, delimiter=',')
-    return train_data
+
+    data_csv = os.path.join(PWD, 'datasets', data_name)
+    data = np.genfromtxt(data_csv, delimiter=',')
+    return data
 
 
 def load_parameters():
     """
+    load parameters saved from datasets. file name: saved_parameters.npy
+    :return:
     """
     data_dir = os.path.dirname(os.path.realpath(__file__))
     saved_parameters = os.path.join(data_dir, 'datasets', 'saved_parameters.npy')
@@ -68,6 +75,8 @@ def print_pypath():
 
 def save_parameters(parameters):
     """
+    save parameters from calculation to saved_parameters.npy
+    :param parameters: parameters from calculation, dictionaries
     """
     data_dir = os.path.dirname(os.path.realpath(__file__))
     saved_parameters = os.path.join(data_dir, 'datasets', 'saved_parameters.npy')

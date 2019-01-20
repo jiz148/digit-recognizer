@@ -1,7 +1,9 @@
 """
 training.py
-Training using gradient decent
+@author: Jinchi Zhang, Jason Zhu, Yunhan Li
+@email: jizjiz148148@gmail.com, jzhu@infoblox.com, kpr.sajuuk@gmail.com
 
+Training using gradient decent.
 """
 import matplotlib.pyplot as plt
 
@@ -24,15 +26,16 @@ def L_layer_model(
     learning_rate=0.009, num_iterations=2000,
     print_cost=False, lambd = 0.7):
     """
+    training using gradient decent
 
-    :param x:
-    :param y:
-    :param layers_dims:
-    :param learning_rate:
-    :param num_iterations:
-    :param print_cost:
-    :param lambd:
-    :return:
+    :param x: input X, numpy arrays
+    :param y: actual answers Y, numpy arrays
+    :param layers_dims: dimensions of layers, lists
+    :param learning_rate: hyper-parameter alpha, floats
+    :param num_iterations: hyper-parameter number of iterations, ints
+    :param print_cost: whether print cost to system, booleans
+    :param lambd: regularization hyper-parameter lambda, floats
+    :return: trained parameters, dictionaries
     """
 
     costs = []  # keep track of cost
@@ -71,10 +74,7 @@ def L_layer_model(
 
 
 def run():
-    """
 
-    :return:
-    """
     np.random.seed(1)
     print('Start training ...')
     train_x_orig, train_y_orig, test_x_orig, test_y_orig = load_datas()
