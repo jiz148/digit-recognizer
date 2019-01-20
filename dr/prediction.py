@@ -12,6 +12,7 @@ from dr.utils import \
 
 def predict(x, y, parameters):
     """
+    prediction over a dataset
 
     :param x: input X
     :param y: output Y
