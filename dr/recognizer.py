@@ -17,9 +17,9 @@ from dr.utils import \
     print_pypath
 
 IMAGE_SIZE = 28
-IMAGE_NAME = '0.jpg'
-TRUE_ANSWER = 0
-IMAGE_TYPE = 1 # 1 as white based, 2 as black based
+IMAGE_NAME = '3.jpg'
+TRUE_ANSWER = 3
+IMAGE_TYPE = 1  # 1 as white based, 2 as black based
 PWD = os.path.dirname(os.path.realpath(__file__))
 
 
