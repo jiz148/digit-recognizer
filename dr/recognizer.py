@@ -1,7 +1,9 @@
 """
-Recogonizer.py
+recognizer.py
+@author: Jinchi Zhang, Yunhan Li
+@email: jizjiz148148@gmail.com, kpr.sajuuk@gmail.com
 
-predict digits for single images
+Predict on single pictures of digits for experiments.
 """
 
 import os
@@ -17,11 +19,18 @@ from dr.utils import \
 IMAGE_SIZE = 28
 IMAGE_NAME = '0.jpg'
 TRUE_ANSWER = 0
-IMAGE_TYPE = 1
+IMAGE_TYPE = 1 # 1 as white based, 2 as black based
 PWD = os.path.dirname(os.path.realpath(__file__))
 
 
 def predict_image(image_name, my_label_y, image_type):
+    """
+    predict images using one step of forward propagation.
+
+    :param image_name: name of the image, strings
+    :param my_label_y: actual answer y, numbers or numpy arrays
+    :param image_type: 1: white based, 2: black based, ints
+    """
 
     # load parameters
     parameters = load_parameters()
