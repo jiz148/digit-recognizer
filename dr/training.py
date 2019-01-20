@@ -5,6 +5,7 @@ training.py
 
 Training using gradient decent.
 """
+
 import matplotlib.pyplot as plt
 
 from dr.utils import \
@@ -16,9 +17,9 @@ from dr.mathEx import *
 # hyper-parameters
 LAYERS_DIMENSIONS = [784, 50, 35, 20, 15, 10]  # 5-layer model
 NUMBER_OF_LABELS = 10
-LEARNING_RATE = 0.01
-NUMBER_OF_ITERATIONS = 12000
-LAMBDA = 0.7
+LEARNING_RATE = 0.009
+NUMBER_OF_ITERATIONS = 16000
+LAMBDA = 0.9
 
 
 def L_layer_model(

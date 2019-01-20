@@ -174,8 +174,7 @@ def L_model_backward_with_l2(aL, y, caches, lambd):
 
     # Lth layer Inputs: "AL, Y, caches". Outputs: "grads["dAL"], grads["dWL"], grads["dbL"]
     current_cache = caches[L - 1]
-    grads["dA" + str(L - 1)], grads["dW" + str(L)], grads["db" + str(L)] = \
-        linear_activation_backward_with_l2(dAL, current_cache, lambd, activation="sigmoid")
+    grads["dA" + str(L - 1)], grads["dW" + str(L)], grads["db" + str(L)] = linear_activation_backward_with_l2(dAL, current_cache, lambd, activation="sigmoid")
 
     for l in reversed(range(L - 1)):
         # lth layer: (RELU -> LINEAR) gradients.
@@ -265,7 +264,8 @@ def linear_backward_with_l2(dz, cache, lambd):
     dW = 1. / m * np.dot(dz, a_prev.T) + (lambd / m) * w
     db = 1. / m * np.sum(dz, axis=1, keepdims=True)
     dA_prev = np.dot(w.T, dz)
-    #dA_prev = dropouts_backward(dA_prev, D, keep_prob)
+
+    # dA_prev = dropouts_backward(dA_prev, D, keep_prob)
 
     assert (dA_prev.shape == a_prev.shape)
     assert (dW.shape == w.shape)
@@ -399,10 +399,10 @@ def sigmoid(z):
     :return: result A, caches for following calculations, numpy arrays or numbers, dictionaries
     """
 
-    z = 1 / (1 + np.exp(-z))
+    a = 1 / (1 + np.exp(-z))
     cache = z
 
-    return z, cache
+    return a, cache
 
 
 def sigmoid_backward(da, cache):
