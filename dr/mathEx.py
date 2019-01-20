@@ -399,10 +399,10 @@ def sigmoid(z):
     :return: result A, caches for following calculations, numpy arrays or numbers, dictionaries
     """
 
-    z = 1 / (1 + np.exp(-z))
+    a = 1 / (1 + np.exp(-z))
     cache = z
 
-    return z, cache
+    return a, cache
 
 
 def sigmoid_backward(da, cache):
