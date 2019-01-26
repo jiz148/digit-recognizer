@@ -154,7 +154,7 @@ def l_model_forward(input_set, parameters):
     return training_result, caches
 
 
-def L_model_backward_with_l2(training_result, label_set, caches, lambd):
+def l_model_backward_with_l2(training_result, label_set, caches, lambd):
     """
     Backward propagation for deep learning with L2 regularization.
 
