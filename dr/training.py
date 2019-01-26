@@ -46,7 +46,7 @@ def L_layer_model(
     for i in range(0, num_iterations):
 
         # Forward propagation: [LINEAR -> RELU]*(L-1) -> LINEAR -> SIGMOID.
-        AL, caches = L_model_forward(x, parameters)
+        AL, caches = l_model_forward(x, parameters)
         # print(AL)
         # print(y)
         # Compute costs
