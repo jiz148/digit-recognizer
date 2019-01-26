@@ -53,7 +53,7 @@ def L_layer_model(
         cost = compute_cost_with_l2_regularization(AL, y, parameters, lambd)
 
         # Backward propagation.
-        grads = L_model_backward_with_l2(AL, y, caches, lambd)
+        grads = l_model_backward_with_l2(AL, y, caches, lambd)
 
         # Update parameters.
         parameters = update_parameters(parameters, grads, learning_rate)
