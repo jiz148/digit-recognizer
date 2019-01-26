@@ -24,7 +24,7 @@ script_base="$( cd "$( echo "${BASH_SOURCE[0]%/*}/.." )" && pwd )"
 script_path="$( cd "$( echo "${BASH_SOURCE[0]%/*}" )" && pwd )"
 
 PYTHON_EXEC="python"
-DEF_VERSION="$(python  --version 2>&1 | grep 'Python' | awk '{print $2}')"
+DEF_VERSION="$(py thon  --version 2>&1 | grep 'Python' | awk '{print $2}')"
 PY2_VERSION="$(python2 --version 2>&1 | grep 'Python' | awk '{print $2}')"
 PY3_VERSION="$(python3 --version 2>&1 | grep 'Python' | awk '{print $2}')"
 USE_PYTHON3="${USE_PYTHON3:-false}"

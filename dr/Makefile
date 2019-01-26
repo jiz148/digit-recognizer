@@ -1,6 +1,6 @@
 .PHONY: clean clean-cache predict training
 
-PROJECT ?= classifier
+PROJECT ?= dr
 
 COVERAGE_DIR := htmlcov
 COVERAGE_REPORT := $(COVERAGE_DIR)/index.html

@@ -23,7 +23,7 @@ def predict(x, y, parameters):
     n = len(parameters) // 2  # number of layers in the neural network
 
     # Forward propagation
-    probas, caches = L_model_forward(x, parameters)
+    probas, caches = l_model_forward(x, parameters)
 
     # changing probabilities to predictions using one vs. all method
     prediction = one_vs_all_prediction(probas)
