@@ -14,13 +14,13 @@
 .PHONY: clean clean-cache
 
 # Project name at top level of the repository
-PROJECT := dr
+PROJECT := {{__PROJECT_FOLDER_AS_PYTHON_TOP_MODULE_NAME__}}
 
 ############################################################
 # Makefile variables and functions
 ############################################################
-DOCKER_USER := jiz148
-DOCKER_NAME := ml-dr
+DOCKER_USER := {{__DOCKER_USER_OR_ORGANIZATION_NAME__}}
+DOCKER_NAME := {{__DOCKER_CONTAINER_NAME__}}
 DOCKER_IMAG := $(DOCKER_USER)/$(DOCKER_NAME)
 DOCKER_TAGS := $(DOCKER_USER)/$(DOCKER_NAME)
 DOCKER_DENV := $(wildcard /.dockerenv)
