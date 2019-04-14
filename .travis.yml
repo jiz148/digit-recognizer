@@ -1,0 +1,17 @@
+language: python
+
+python:
+  - 3.6
+
+before_install:
+  -
+
+install:
+  - make dev-setup
+
+script:
+  - make test
+
+after_success:
+  - export CODECOV_TOKEN=413e02f6-17e6-40d7-a2dc-3877075efc1f # py-ml/digit-recognizer
+  - bash <(curl -s https://codecov.io/bash) -t 413e02f6-17e6-40d7-a2dc-3877075efc1f
