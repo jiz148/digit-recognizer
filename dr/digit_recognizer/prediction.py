@@ -5,9 +5,9 @@ predict training set and calculate accuracy
 import os
 import numpy as np
 
-from ml.common.mathEx import one_vs_all_prediction, l_model_forward
-from ml.digit_recognizer.datasvc import DataSvc
-from ml.common.parameters import Parameters
+from dr.common.mathEx import one_vs_all_prediction, l_model_forward
+from dr.digit_recognizer.datasvc import DataSvc
+from dr.common.parameters import Parameters
 
 PWD = os.path.dirname(os.path.realpath(__file__))
 

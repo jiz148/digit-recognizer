@@ -9,8 +9,8 @@ Services for loading data and pamrameters
 
 import os
 
-from ml.utils.logger import get_logger
-from ml.common.datasvc_abstract import DataSvcAbstract
+from dr.utils.logger import get_logger
+from dr.common.datasvc_abstract import DataSvcAbstract
 
 LOGGER = get_logger(__name__)
 PWD = os.path.dirname(os.path.realpath(__file__))

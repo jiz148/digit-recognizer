@@ -13,7 +13,7 @@ import os
 import re
 import jsonpickle
 
-from dr.utils.logger import get_logger
+from ml.utils.logger import get_logger
 
 LOGGER = get_logger(__name__)
 
@@ -190,6 +190,13 @@ def get_hash(string_input="", salt="", hash_type="sha256", large_size=1024 * 102
     return hash_func(content).hexdigest() if data else ""
 
 
+def get_json(obj, indent=4):
+    """
+    Get formatted JSON dump string
+    """
+    return json.dumps(obj, sort_keys=True, indent=indent)
+
+
 def is_function(func_var):
     """
     Check if a variable is a callable function object.
@@ -204,13 +211,6 @@ def is_function(func_var):
         types.MethodType, types.BuiltinMethodType))
     positive = inspect.isfunction(func_var)
     return can_call or chk_type or positive
-
-
-def get_json(obj, indent=4):
-    """
-    Get formatted JSON dump string
-    """
-    return json.dumps(obj, sort_keys=True, indent=indent)
 
 
 def pickle_object(obj, *rm_keys):

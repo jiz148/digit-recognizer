@@ -11,8 +11,8 @@ import numpy as np
 from PIL import Image
 from matplotlib import pyplot as plt
 
-from ml.digit_recognizer.prediction import predict
-from ml.common.parameters import Parameters
+from dr.digit_recognizer.prediction import predict
+from dr.common.parameters import Parameters
 
 IMAGE_SIZE = 28
 IMAGE_NAME = '3.jpg'

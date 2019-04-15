@@ -10,13 +10,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
-from ml.digit_recognizer.datasvc import DataSvc
-from ml.common.mathEx import \
+from dr.digit_recognizer.datasvc import DataSvc
+from dr.common.mathEx import \
     change_to_multi_class, \
     compute_cost_with_l2_regularization, \
     l_model_backward_with_l2, \
     l_model_forward
-from ml.common.parameters import Parameters
+from dr.common.parameters import Parameters
 
 # hyper-parameters
 PWD = os.path.dirname(os.path.realpath(__file__))

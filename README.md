@@ -1,6 +1,17 @@
 # Digital Recognizer
 
 > python machine learning: digit-recognizer
+> <br/>Deep leaning computer vision model built by 40000+ training and testing examples.</br>
+> <br/>Recognize hand written digits or predict on big data sets </br>
+> <br/>97% of accuracy over a 20,000 testing examples </br>
+
+
+> picture example:
+> <br/> ![3](./dr/digit_recognizer/images/3.jpg)</br>
+
+> sample output:
+> <br/>`My model predicted this images as:  [[3]] `</br>
+> <br/>`This image is actually:  3` </br>
 
 [![Code Coverage](https://codecov.io/gh/py-ml/digit-recognizer/branch/master/graph/badge.svg)](https://codecov.io/gh/py-ml/digit-recognizer)
 [![Build Status](https://travis-ci.org/py-ml/digit-recognizer.svg?branch=master)](https://travis-ci.org/py-ml/digit-recognizer)
